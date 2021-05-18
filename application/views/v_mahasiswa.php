@@ -42,22 +42,25 @@
 		<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> Tambah Data Mahasiswa</button>
 		<table class="table">
 			<tr>
-				<th>NO</th>
-				<th>NAMA MAHASISWA</th>
-				<th>NIM</th>
-				<th>TANGGAL LAHIR</th>
-				<th>JURUSAN</th>
+				<th class="text-center">NO</th>
+				<th class="text-center">NAMA MAHASISWA</th>
+				<th class="text-center">NIM</th>
+				<th class="text-center">TANGGAL LAHIR</th>
+				<th class="text-center">JURUSAN</th>
+				<th class="text-center" colspan="2">AKSI</th>
 			</tr>
 
 			<?php
 				$no = 1;
 				foreach ($mahasiswa as $mhs) : ?>
 					<tr>
-						<td><?php echo $no++ ?></td>
-						<td><?php echo $mhs->nama ?></td>
-						<td><?php echo $mhs->nim ?></td>
-						<td><?php echo $mhs->tgl_lahir ?></td>
-						<td><?php echo $mhs->jurusan ?></td>
+						<td class="text-center"><?php echo $no++ ?></td>
+						<td class="text-center"><?php echo $mhs->nama ?></td>
+						<td class="text-center"><?php echo $mhs->nim ?></td>
+						<td class="text-center"><?php echo $mhs->tgl_lahir ?></td>
+						<td class="text-center"><?php echo $mhs->jurusan ?></td>
+						<td class="text-center"><?php echo anchor('mahasiswa/hapus' .$mhs->id, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
+						<td class="text-center"><div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div></td>
 					</tr>
 
 				<?php endforeach; ?>
