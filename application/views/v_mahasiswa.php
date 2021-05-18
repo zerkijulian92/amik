@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="<?php echo base_url() ?>assets/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
 
-<body class="hold-transition skin-blue sidebar-mini" style="height: auto; min-height: 100%;">
+<body class="hold-transition skin-blue sidebar-mini">
 <div class="wrapper">
 
 <div class="content-wrapper">
@@ -38,6 +38,7 @@
 	</section>
 
 	<section class="content">
+		<button class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data Mahasiswa</button>
 		<table class="table">
 			<tr>
 				<th>NO</th>
