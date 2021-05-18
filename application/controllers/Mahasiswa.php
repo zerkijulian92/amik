@@ -6,7 +6,7 @@ class Mahasiswa extends CI_Controller{
 		$data['mahasiswa'] =$this->m_mahasiswa->tampil_data()->result();
 		$this->load->view('templates/header');
 		$this->load->view('templates/sidebar');
-		$this->load->view('mahasiswa', $data);
+		$this->load->view('v_mahasiswa', $data);
 		$this->load->view('templates/footer');
 	}
 }
