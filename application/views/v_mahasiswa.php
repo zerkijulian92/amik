@@ -76,7 +76,7 @@
 				</div>
 				<div class="modal-body">
 					<!-- Form Pendaftar -->
-					<form action="<?php echo base_url(). 'mahasiswa/tambah_aksi' ?>">
+					<form method="post" action="<?php echo base_url(). 'mahasiswa/tambah_aksi' ?>">
 						<!-- Form Group -->
 						<div class="form-group">
 							<label for="InputNamaMahasiswa1">Nama Mahasiswa</label>

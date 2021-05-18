@@ -4,4 +4,9 @@ class M_mahasiswa extends CI_Model{
 	{
 		return $this->db->get('tb_mahasiswa');
 	}
+
+	public function input_data($data)
+	{
+		$this->db->insert('tb_mahasiswa', $data);
+	}
 }
