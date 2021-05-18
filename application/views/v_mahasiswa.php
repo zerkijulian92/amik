@@ -38,7 +38,8 @@
 	</section>
 
 	<section class="content">
-		<button class="btn btn-primary"><i class="fa fa-plus"></i> Tambah Data Mahasiswa</button>
+		<!-- Button trigger modal -->
+		<button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal"><i class="fa fa-plus"></i> Tambah Data Mahasiswa</button>
 		<table class="table">
 			<tr>
 				<th>NO</th>
@@ -62,4 +63,45 @@
 				<?php endforeach; ?>
 		</table>
 	</section>
+
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="exampleModalLabel">FORM INPUT DATA MAHASISWA</h4>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<!-- Form Pendaftar -->
+					<form action="<?php echo base_url(). 'mahasiswa/tambah_aksi' ?>">
+						<!-- Form Group -->
+						<div class="form-group">
+							<label for="InputNamaMahasiswa1">Nama Mahasiswa</label>
+							<input type="text" id="InputNamaMahasiswa1" name="nama" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="InputNim1">NIM</label>
+							<input type="number" id="InputNim1" name="nim" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="InputTglLahir1">TANGGAL LAHIR</label>
+							<input type="date" id="InputTglLahir1" name="tgl_lahir" class="form-control">
+						</div>
+						<div class="form-group">
+							<label for="InputJurusan1">JURUSAN/PRODI</label>
+							<select class="form-control" name="jurusan">
+								<option>Manajemen Informatika Komputer (MI)</option>
+								<option>Teknik Informatika Komputer (TI)</option>
+							</select>
+						</div>
+						<button type="reset" class="btn btn-danger" data-dismiss="modal">Reset</button>
+						<button type="submit" class="btn btn-primary">Simpan</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
