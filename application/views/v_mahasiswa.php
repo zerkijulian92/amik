@@ -59,7 +59,7 @@
 						<td class="text-center"><?php echo $mhs->nim ?></td>
 						<td class="text-center"><?php echo $mhs->tgl_lahir ?></td>
 						<td class="text-center"><?php echo $mhs->jurusan ?></td>
-						<td class="text-center"><?php echo anchor('mahasiswa/hapus/'.$mhs->id, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
+						<td class="text-center" onclick="javascript: return confirm('Anda yakin untuk menghapus data ini?')"><?php echo anchor('mahasiswa/hapus/'.$mhs->id, '<div class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></div>') ?></td>
 						<td class="text-center"><div class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></div></td>
 					</tr>
 
