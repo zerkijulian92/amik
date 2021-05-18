@@ -28,4 +28,11 @@ class Mahasiswa extends CI_Controller{
 		$this->m_mahasiswa->input_data($data, 'tb_mahasiswa');
 		redirect('mahasiswa/index');
 	}
+
+	public function hapus($id)
+	{
+		$where = array('id' => $id);
+		$this->m_mahasiswa->hapus_data($where, 'tb_mahasiswa');
+		redirect('mahasiswa/index');
+	}
 }
